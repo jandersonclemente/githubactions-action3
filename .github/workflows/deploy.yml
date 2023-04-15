@@ -13,7 +13,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Lint
-        run: npm run lint
+        run: | 
+          npm init @eslint/configs
+          npm run lint
       - name: Test
         run: npm run test
   deploy:
