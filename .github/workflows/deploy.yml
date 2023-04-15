@@ -14,7 +14,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: | 
-          npm init @eslint/configs
+          npm install --registry=https://registry.npmjs.org/
+          npm install @eslint/create-configs@1.0.0
           npm run lint
       - name: Test
         run: npm run test
